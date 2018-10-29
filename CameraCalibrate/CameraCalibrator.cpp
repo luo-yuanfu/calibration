@@ -120,8 +120,8 @@ cv::Mat CameraCalibrator::remap(const cv::Mat &image) {
             distCoeffs,    // computed distortion matrix
             cv::Mat(),     // optional rectification (none) 
 			cv::Mat(),     // camera matrix to generate undistorted
-			cv::Size(640,480),
-//            image.size(),  // size of undistorted
+//			cv::Size(640,480),
+            image.size(),  // size of undistorted
             CV_32FC1,      // type of output map
             map1, map2);   // the x and y mapping functions
 
